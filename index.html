@@ -1,17 +1,195 @@
-HTML
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rakshak</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAKSHAK | Defence Recruitment & Exam Preparation</title>
+<style>
+:root{--navy:#102b22;--green:#1c513b;--gold:#e0b44c;--cream:#f4f7f2;--ink:#18251f;--muted:#65736b;--white:#fff;--line:#dce5dc;--red:#b43d36}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+header{background:linear-gradient(120deg,#102b22,#1c513b);color:white;padding:18px 5%;position:sticky;top:0;z-index:10;box-shadow:0 3px 12px #0002}
+.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.brand{font-weight:900;font-size:1.35rem;letter-spacing:1px}.brand span{color:var(--gold)}nav{display:flex;gap:7px;flex-wrap:wrap}nav button{background:transparent;color:white;border:1px solid #ffffff55;padding:8px 11px;border-radius:8px;cursor:pointer}nav button:hover,nav button.active{background:#ffffff20;border-color:var(--gold)}
+main{max-width:1200px;margin:auto;padding:24px 5% 55px}.hero{background:linear-gradient(120deg,#173f2e,#245d43);border-radius:20px;color:white;padding:clamp(28px,5vw,60px);display:grid;grid-template-columns:1.5fr 1fr;gap:20px;align-items:center;overflow:hidden}.hero h1{font-size:clamp(2.1rem,5vw,4rem);line-height:1.08;margin:8px 0 16px}.hero p{max-width:620px;color:#e2eee5}.tag{display:inline-block;background:#ffffff18;border:1px solid #ffffff44;padding:5px 10px;border-radius:30px;font-size:.82rem}.hero-mark{font-size:clamp(5rem,12vw,9rem);text-align:center;filter:drop-shadow(0 8px 10px #0003)}.btn{border:0;background:var(--gold);color:#1b2b20;font-weight:700;padding:11px 16px;border-radius:9px;cursor:pointer}.btn.secondary{background:var(--green);color:white}.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}.btn.danger{background:var(--red);color:white}.btn:disabled{opacity:.5;cursor:not-allowed}.section{margin-top:30px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;flex-wrap:wrap;margin-bottom:14px}.section h2{margin:0;color:var(--navy)}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:white;border:1px solid var(--line);border-radius:15px;padding:20px;box-shadow:0 4px 14px #183b2b08}.card h3{margin:5px 0 8px;color:var(--navy)}.emoji{font-size:2rem}.pill{display:inline-block;font-size:.78rem;padding:4px 9px;border-radius:20px;background:#e8f1e9;color:#24583c;margin:3px 3px 3px 0}.page{display:none}.page.active{display:block}.form{display:grid;gap:13px;max-width:560px}.field{display:grid;gap:5px}.field label{font-weight:700;font-size:.92rem}.field input,.field select,.field textarea{width:100%;padding:11px 12px;border:1px solid #cbd8cd;border-radius:8px;font:inherit;background:white}.field textarea{min-height:95px;resize:vertical}.notice{background:#fff8e4;border:1px solid #f0dfaa;padding:12px 14px;border-radius:10px}.success{background:#e7f5e9;border:1px solid #b6d9bd;padding:12px;border-radius:10px}.question{padding:17px;background:#fff;border:1px solid var(--line);border-radius:12px;margin:12px 0}.option{display:block;padding:8px 10px;margin-top:6px;background:#f4f7f2;border-radius:8px;cursor:pointer}.option input{margin-right:8px}.result{font-size:1.1rem;font-weight:700}.list-item{padding:12px 0;border-bottom:1px solid var(--line)}footer{background:var(--navy);color:#dbe8de;padding:25px 5%;text-align:center}small{color:inherit}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}.hide{display:none!important}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.hero-mark{display:none}.grid{grid-template-columns:1fr 1fr}.two-col{grid-template-columns:1fr}header{position:static}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}nav button{font-size:.82rem;padding:7px 8px}.nav{align-items:flex-start}}
+</style>
 </head>
-<body style="font-family:Arial;text-align:center;background:#eef4ee;padding:30px">
-  <h1>🇮🇳 RAKSHAK</h1>
-  <h2>Defence Recruitment & Exam Preparation</h2>
-  <p>Welcome to Rakshak!</p>
-  <p>Army | Navy | Air Force</p>
-  <button onclick="alert('Welcome to Rakshak!')">Get Started</button>
+<body>
+<header>
+  <div class="nav">
+    <div class="brand">🇮🇳 RAK<span>SHAK</span></div>
+    <nav aria-label="Main navigation">
+      <button class="active" data-page="home">Home</button>
+      <button data-page="careers">Careers</button>
+      <button data-page="exams">Exams</button>
+      <button data-page="mock">Mock Test</button>
+      <button data-page="materials">Study Material</button>
+      <button data-page="progress">My Progress</button>
+      <button data-page="about">About</button>
+    </nav>
+  </div>
+</header>
+<main>
+  <section id="home" class="page active">
+    <div class="hero">
+      <div>
+        <span class="tag">DISCIPLINE • KNOWLEDGE • SERVICE</span>
+        <h1>Your Defence Preparation Starts Here.</h1>
+        <p>Explore defence career pathways, understand exam basics, practise general knowledge questions and track your practice results — all in one beginner-friendly place.</p>
+        <button class="btn" data-go="careers">Explore Careers →</button>
+        <button class="btn secondary" data-go="mock">Start Mock Test</button>
+      </div>
+      <div class="hero-mark" aria-hidden="true">🛡️</div>
+    </div>
+    <div class="section">
+      <div class="section-head"><h2>What can you do on Rakshak?</h2><span class="muted">Quick access</span></div>
+      <div class="grid">
+        <article class="card"><div class="emoji">🎖️</div><h3>Defence Careers</h3><p>Read introductory information about Army, Navy, Air Force and CAPF opportunities.</p><button class="btn secondary" data-go="careers">Explore</button></article>
+        <article class="card"><div class="emoji">📝</div><h3>Mock Test</h3><p>Try a short practice quiz and see your score with explanations.</p><button class="btn secondary" data-go="mock">Practise now</button></article>
+        <article class="card"><div class="emoji">📚</div><h3>Study Material</h3><p>Use a simple study checklist to organise your preparation.</p><button class="btn secondary" data-go="materials">Open material</button></article>
+      </div>
+    </div>
+    <div class="section notice"><strong>Important:</strong> This is an educational project, not an official recruitment website. Always confirm current eligibility, dates and vacancies through official government recruitment websites.</div>
+  </section>
+
+  <section id="careers" class="page">
+    <div class="section-head"><div><h2>Defence Career Explorer</h2><p class="muted">Basic overview only. Exact eligibility differs by entry and notification.</p></div></div>
+    <div class="grid">
+      <article class="card"><div class="emoji">🪖</div><h3>Indian Army</h3><p>Land-based defence force. Opportunities can include officer entries, soldier/Agniveer recruitment and technical roles.</p><span class="pill">Leadership</span><span class="pill">Land operations</span><p><strong>Prepare:</strong> fitness, general awareness, reasoning and the syllabus specified for your entry.</p><a href="https://joinindianarmy.nic.in/" target="_blank" rel="noopener">Official recruitment website ↗️</a></article>
+      <article class="card"><div class="emoji">⚓</div><h3>Indian Navy</h3><p>Maritime defence force with officer, sailor/Agniveer and technical pathways as notified.</p><span class="pill">Maritime</span><span class="pill">Technology</span><p><strong>Prepare:</strong> maths/science where required, reasoning, English, fitness and medical standards.</p><a href="https://joinindiannavy.gov.in/" target="_blank" rel="noopener">Official recruitment website ↗️</a></article>
+      <article class="card"><div class="emoji">✈️</div><h3>Indian Air Force</h3><p>Air and space defence operations, with officer and other entry pathways according to current notifications.</p><span class="pill">Aviation</span><span class="pill">Engineering</span><p><strong>Prepare:</strong> entry-specific subjects, reasoning, English, fitness and medical requirements.</p><a href="https://agnipathvayu.cdac.in/" target="_blank" rel="noopener">Agniveervayu portal ↗️</a></article>
+      <article class="card"><div class="emoji">🛡️</div><h3>CAPF / Paramilitary</h3><p>Central Armed Police Forces support internal security and border duties. Recruitment routes differ by force and post.</p><span class="pill">Security</span><span class="pill">Public service</span><p><strong>Prepare:</strong> verify the specific SSC/UPSC or force notification, exam pattern and physical standards.</p><a href="https://upsc.gov.in/" target="_blank" rel="noopener">UPSC official website ↗️</a></article>
+      <article class="card"><div class="emoji">🎓</div><h3>NDA / Officer Entries</h3><p>Officer-entry exams have specific age, education, selection and medical conditions. Check the latest notification before applying.</p><span class="pill">Officer pathway</span><p><strong>Prepare:</strong> maths/GAT as applicable, communication, current affairs and fitness.</p><a href="https://upsc.gov.in/" target="_blank" rel="noopener">UPSC notifications ↗️</a></article>
+      <article class="card"><div class="emoji">💻</div><h3>Technical Defence Roles</h3><p>Engineering and computer science graduates may find technical opportunities depending on branch, qualification and recruitment notice.</p><span class="pill">CSE / AIML</span><span class="pill">Technology</span><p><strong>Prepare:</strong> core technical subjects, programming fundamentals and the exact criteria for each role.</p><a href="https://www.joinindianarmy.nic.in/" target="_blank" rel="noopener">Check official entries ↗️</a></article>
+    </div>
+  </section>
+
+  <section id="exams" class="page">
+    <div class="section-head"><div><h2>Exam Preparation Guide</h2><p class="muted">Use this as a starting point, then match it with the current official notification.</p></div></div>
+    <div class="grid">
+      <article class="card"><h3>NDA / NA</h3><p>Typically includes Mathematics and General Ability Test. Eligibility, age and selection stages are notification-specific.</p><span class="pill">Maths</span><span class="pill">English</span><span class="pill">GK / Science</span></article>
+      <article class="card"><h3>Agniveer entries</h3><p>Exam subjects and selection steps vary by service and trade. Read the relevant service notification carefully.</p><span class="pill">Entry-specific syllabus</span><span class="pill">Fitness</span></article>
+      <article class="card"><h3>CDS / AFCAT</h3><p>Graduate-level officer entry routes with different eligibility and examination patterns.</p><span class="pill">English</span><span class="pill">GK</span><span class="pill">Reasoning / Maths as applicable</span></article>
+      <article class="card"><h3>CAPF / SSC routes</h3><p>Posts can have written tests, physical standards/tests and medical checks. Exact pattern depends on the post.</p><span class="pill">Reasoning</span><span class="pill">GK</span><span class="pill">Quantitative aptitude</span></article>
+      <article class="card"><h3>Daily current affairs</h3><p>Read a reliable daily news summary, make short notes, and revise weekly. Check facts from trustworthy sources.</p><span class="pill">15–20 minutes</span></article>
+      <article class="card"><h3>Fitness & routine</h3><p>Build a gradual, age-appropriate routine and rest adequately. Follow official physical standards for your target entry.</p><span class="pill">Consistency</span><span class="pill">Recovery</span></article>
+    </div>
+    <div class="section notice">Recruitment rules and vacancies change. Rakshak does not provide live vacancy data; use official websites for final confirmation.</div>
+  </section>
+
+  <section id="mock" class="page">
+    <div class="section-head"><div><h2>General Knowledge Mock Test</h2><p class="muted">10 practice questions • one point each • instant result</p></div><button class="btn ghost" id="resetQuiz">Reset test</button></div>
+    <div id="quizIntro" class="card"><p>Choose one answer for each question. Your score will be saved locally in this browser after you submit.</p><button class="btn" id="startQuiz">Start Test</button></div>
+    <form id="quizForm" class="hide">
+      <div id="questions"></div>
+      <button class="btn" type="submit">Submit Answers</button>
+    </form>
+    <div id="quizResult" class="card hide" aria-live="polite"></div>
+  </section>
+
+  <section id="materials" class="page">
+    <div class="section-head"><div><h2>Study Material & Checklist</h2><p class="muted">Tick off the topics you have revised. Your checklist stays in this browser.</p></div><button class="btn ghost" id="clearChecklist">Reset checklist</button></div>
+    <div class="two-col">
+      <div class="card">
+        <h3>Daily preparation checklist</h3>
+        <div id="checklist"></div>
+        <p id="checkProgress" class="muted">0 completed</p>
+      </div>
+      <div class="card">
+        <h3>Suggested study routine</h3>
+        <div class="list-item"><strong>20 minutes:</strong> Current affairs and short notes.</div>
+        <div class="list-item"><strong>25 minutes:</strong> Reasoning or quantitative aptitude.</div>
+        <div class="list-item"><strong>25 minutes:</strong> GK / history / geography / science revision.</div>
+        <div class="list-item"><strong>15 minutes:</strong> Defence awareness and official notifications.</div>
+        <div class="list-item"><strong>10 minutes:</strong> Review mistakes and plan tomorrow.</div>
+        <p class="muted">Adapt the routine to your college workload, health and the exam syllabus.</p>
+      </div>
+    </div>
+    <div class="section grid">
+      <article class="card"><h3>General Knowledge</h3><p>Indian polity, history, geography, basic science, economy and important national events.</p></article>
+      <article class="card"><h3>Reasoning & Maths</h3><p>Number series, analogy, directions, percentages, ratios and arithmetic basics, depending on the target exam.</p></article>
+      <article class="card"><h3>Defence awareness</h3><p>Services and commands at a high level, ranks, important exercises, awards and official recruitment updates.</p></article>
+    </div>
+  </section>
+
+  <section id="progress" class="page">
+    <div class="section-head"><div><h2>My Progress</h2><p class="muted">This data is stored locally in this browser, not in an online account.</p></div><button class="btn danger" id="clearProgress">Clear saved progress</button></div>
+    <div class="grid">
+      <article class="card"><div class="muted">Mock tests submitted</div><div id="testCount" class="result">0</div></article>
+      <article class="card"><div class="muted">Best mock score</div><div id="bestScore" class="result">0 / 10</div></article>
+      <article class="card"><div class="muted">Checklist completed</div><div id="taskCount" class="result">0 / 8</div></article>
+    </div>
+    <div class="section card"><h3>Recent test result</h3><div id="lastResult" class="muted">No test submitted yet.</div></div>
+  </section>
+
+  <section id="about" class="page">
+    <div class="card">
+      <h2>About Rakshak</h2>
+      <p><strong>RAKSHAK — Defence Recruitment & Exam Preparation</strong> is a student educational project concept designed to bring introductory career information, exam preparation guidance, a practice quiz and a simple progress checklist together.</p>
+      <p><strong>Technology:</strong> HTML, CSS and JavaScript for this browser demo.</p>
+      <p><strong>Limitations:</strong> This version has no user login, cloud database, live vacancies, official application submission or Java backend. Quiz and checklist progress are saved only in the same browser using local storage.</p>
+      <p><strong>Disclaimer:</strong> Independent educational project; not affiliated with the Indian Armed Forces or any government department. Confirm all recruitment information on official websites.</p>
+    </div>
+  </section>
+</main>
+<footer><strong>🇮🇳 RAKSHAK</strong><br><small>Learn with discipline. Prepare with purpose. Verify through official sources.</small></footer>
+<script>
+const pageNames = ["home","careers","exams","mock","materials","progress","about"];
+function showPage(name){
+  if(!pageNames.includes(name)) name="home";
+  document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id===name));
+  document.querySelectorAll("nav button[data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===name));
+  window.scrollTo({top:0,behavior:"smooth"});
+  if(name==="progress") renderProgress();
+}
+document.querySelectorAll("[data-page]").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.page)));
+document.querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.go)));
+
+const quiz = [
+ {q:"What is the capital of India?",o:["Mumbai","New Delhi","Kolkata","Chennai"],a:1,e:"New Delhi is the capital of India."},
+ {q:"Which organisation conducts the NDA examination?",o:["UPSC","SSC","IBPS","NTA"],a:0,e:"UPSC conducts the NDA/NA examination."},
+ {q:"Which force primarily operates at sea?",o:["Indian Army","Indian Navy","Indian Air Force","CAPF"],a:1,e:"The Indian Navy is India's maritime force."},
+ {q:"What does GDP stand for?",o:["Gross Domestic Product","General Development Plan","Global Defence Programme","Gross Department Price"],a:0,e:"GDP stands for Gross Domestic Product."},
+ {q:"Which planet is known as the Red Planet?",o:["Venus","Jupiter","Mars","Mercury"],a:2,e:"Mars is commonly called the Red Planet."},
+ {q:"Which is the national animal of India?",o:["Lion","Bengal tiger","Elephant","Leopard"],a:1,e:"The Bengal tiger is India's national animal."},
+ {q:"What is the full form of NCC?",o:["National Cadet Corps","National Command Council","Naval Cadet Committee","National Civil Corps"],a:0,e:"NCC stands for National Cadet Corps."},
+ {q:"Which instrument measures atmospheric pressure?",o:["Thermometer","Barometer","Hygrometer","Ammeter"],a:1,e:"A barometer measures atmospheric pressure."},
+ {q:"Which of these is a programming language?",o:["HTML only","Java","HTTP","USB"],a:1,e:"Java is a programming language."},
+ {q:"What should you check before applying for a defence vacancy?",o:["Only social media posts","Only old notes","The latest official notification","A random message"],a:2,e:"Always check the latest official notification and eligibility."}
+];
+const quizIntro=document.getElementById("quizIntro"),quizForm=document.getElementById("quizForm"),questions=document.getElementById("questions"),quizResult=document.getElementById("quizResult");
+function startQuiz(){
+ quizIntro.classList.add("hide");quizResult.classList.add("hide");quizForm.classList.remove("hide");
+ questions.innerHTML=quiz.map((item,i)=><div class="question"><strong>${i+1}. ${item.q}</strong>${item.o.map((opt,j)=><label class="option"><input type="radio" name="q${i}" value="${j}" required>${opt}</label>).join("")}</div>).join("");
+}
+document.getElementById("startQuiz").addEventListener("click",startQuiz);
+document.getElementById("resetQuiz").addEventListener("click",()=>{quizForm.classList.add("hide");quizResult.classList.add("hide");quizIntro.classList.remove("hide");});
+quizForm.addEventListener("submit",e=>{
+ e.preventDefault();let score=0,details=[];
+ quiz.forEach((item,i)=>{const selected=quizForm.querySelector(input[name="q${i}"]:checked);const answer=selected?Number(selected.value):-1;if(answer===item.a)score++;details.push(<div class="list-item"><strong>${i+1}. ${item.q}</strong><br>Your answer: ${answer<0?"Not answered":item.o[answer]}<br>Correct answer: ${item.o[item.a]}<br><span class="muted">${item.e}</span></div>);});
+ const hist=JSON.parse(localStorage.getItem("rakshakTests")||"[]");hist.push({score,date:new Date().toLocaleString()});localStorage.setItem("rakshakTests",JSON.stringify(hist));
+ quizForm.classList.add("hide");quizResult.classList.remove("hide");quizResult.innerHTML=<h2>Test Result</h2><p class="result">Your score: ${score} / ${quiz.length}</p><p>${score>=8?"Excellent work! Keep revising.":score>=5?"Good attempt. Review the explanations and try again.":"Keep practising. Read the explanations and repeat the test."}</p><details><summary>Review answers</summary>${details.join("")}</details><br><button class="btn" onclick="startQuiz()">Try Again</button>;
+ renderProgress();
+});
+const tasks=["Read today's current affairs","Revise Indian polity","Revise history or geography","Practise reasoning questions","Practise maths basics","Learn one defence-related topic","Do appropriate physical activity / mobility","Review mistakes and plan tomorrow"];
+function getChecks(){return JSON.parse(localStorage.getItem("rakshakChecks")||"[]");}
+function renderChecklist(){
+ const checks=getChecks();document.getElementById("checklist").innerHTML=tasks.map((t,i)=><label class="option"><input type="checkbox" data-task="${i}" ${checks.includes(i)?"checked":""}>${t}</label>).join("");
+ document.getElementById("checkProgress").textContent=${checks.length} of ${tasks.length} completed today;
+ document.getElementById("taskCount").textContent=${checks.length} / ${tasks.length};
+ document.querySelectorAll("[data-task]").forEach(el=>el.addEventListener("change",()=>{
+   let c=getChecks();const id=Number(el.dataset.task);c=el.checked?[...new Set([...c,id])]:c.filter(x=>x!==id);localStorage.setItem("rakshakChecks",JSON.stringify(c));renderChecklist();renderProgress();
+ }));
+}
+document.getElementById("clearChecklist").addEventListener("click",()=>{if(confirm("Reset the checklist?")){localStorage.removeItem("rakshakChecks");renderChecklist();renderProgress();}});
+function renderProgress(){
+ const hist=JSON.parse(localStorage.getItem("rakshakTests")||"[]");const best=hist.length?Math.max(...hist.map(x=>x.score)):0;
+ document.getElementById("testCount").textContent=hist.length;document.getElementById("bestScore").textContent=${best} / ${quiz.length};
+ document.getElementById("lastResult").textContent=hist.length?${hist[hist.length-1].score} / ${quiz.length} — ${hist[hist.length-1].date}:"No test submitted yet.";
+ document.getElementById("taskCount").textContent=${getChecks().length} / ${tasks.length};
+}
+document.getElementById("clearProgress").addEventListener("click",()=>{if(confirm("Delete saved test history and checklist progress from this browser?")){localStorage.removeItem("rakshakTests");localStorage.removeItem("rakshakChecks");renderChecklist();renderProgress();}});
+renderChecklist();renderProgress();
+</script>
 </body>
 </html>
